@@ -118,7 +118,8 @@ app.delete("/sessions/:session_id", (req, res) => {
   res.json({ success: true });
 });
 
-app.listen(8003, ()=>console.log("Server on :8003"));
+const PORT = process.env.PORT || 8003;
+app.listen(PORT, ()=>console.log("Server on :8003"));
 /*
 // server.js - ExpressJS Backend Alternative
 import express from "express";
